@@ -9,6 +9,5 @@
         ContentRendered="Window_ContentRendered">
     <Grid>
         <Image Name="DrawArea" HorizontalAlignment="Left" VerticalAlignment="Top" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
-        <Button Name="StartButton" Content="Start" Click="StartClick" Margin="477,384,0,0"/>
     </Grid>
 </Window>
