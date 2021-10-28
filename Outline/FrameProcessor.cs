@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using WinRT;
 using System.Windows;
 using System.Windows.Media;
+using Outline.Effects;
 
 namespace Outline
 {
@@ -72,6 +73,9 @@ namespace Outline
             _tmpBuffer = null;
             mut.ReleaseMutex();
 
+            BoxBlur blur = new BoxBlur();
+            blur.Effect(bitmap);
+
             DrawFrame(bitmap);
             _running = false;
 
@@ -86,8 +90,8 @@ namespace Outline
                 (
                     origin.PixelWidth,
                     origin.PixelHeight,
-                    96,
-                    96,
+                    50,
+                    50,
                     PixelFormats.Bgra32,
                     null
                 );
